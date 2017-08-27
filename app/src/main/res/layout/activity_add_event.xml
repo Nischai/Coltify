@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.coltify.minievent.AddEventActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/imb_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/add_btn"/>
+
+        <EditText
+            android:id="@+id/edt_event_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_name"
+            android:layout_below="@+id/imb_poster"
+            style="@style/InputField.Data"/>
+
+        <EditText
+            android:id="@+id/edt_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/location"
+            android:layout_below="@+id/edt_event_name"
+            style="@style/InputField.Data"/>
+
+        <EditText
+            android:id="@+id/edt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date"
+            android:layout_below="@+id/edt_location"
+            style="@style/InputField.Data.Date"/>
+
+        <EditText
+            android:id="@+id/edt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/time"
+            android:layout_below="@+id/edt_date"
+            style="@style/InputField.Data.Date"/>
+
+        <EditText
+            android:id="@+id/edt_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/mobile_number"
+            android:layout_below="@+id/edt_time"
+            style="@style/InputField.Data.Number"/>
+
+        <EditText
+            android:id="@+id/edt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description"
+            android:layout_below="@+id/edt_mobile_number"
+            style="@style/InputField.Data.Multiline"/>
+
+        <Button
+            android:id="@+id/btn_create_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_description"
+            android:text="@string/create_event"
+            style="@style/Button.Flat"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

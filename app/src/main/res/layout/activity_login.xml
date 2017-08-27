@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.coltify.minievent.LoginActivity">
+
+    <EditText
+        android:id="@+id/edt_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        style="@style/InputField.Credentials.Email"/>
+
+    <EditText
+        android:id="@+id/edt_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_login_email"
+        android:hint="@string/password"
+        style="@style/InputField.Credentials.Password"/>
+    <TextView
+        android:id="@+id/lbl_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:layout_below="@+id/edt_login_password"
+        style="@style/Label.ForgetPassword"/>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_forgot_password"
+        android:text="@string/login"
+        style="@style/Button.Flat"/>
+
+
+    <Button
+        android:id="@+id/btn_login_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:text="@string/sign_in_with_email"
+        style="@style/Button.Flat"/>
+
+
+</RelativeLayout>

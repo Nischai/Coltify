@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.coltify.minievent.SignInActivity">
+
+    <EditText
+        android:id="@+id/edt_signin_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        style="@style/InputField.Credentials" />
+    <EditText
+        android:id="@+id/edt_signin_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:layout_below="@+id/edt_signin_username"
+        style="@style/InputField.Credentials.Email"/>
+    <EditText
+        android:id="@+id/edt_signin_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_below="@+id/edt_signin_email"
+        style="@style/InputField.Credentials.Password"/>
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_signin_password"
+        android:text="@string/sign_in"
+        style="@style/Button.Flat"/>
+    <ProgressBar
+        android:id="@+id/prog_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_signin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
