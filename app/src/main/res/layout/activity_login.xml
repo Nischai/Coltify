@@ -34,12 +34,20 @@
         android:text="@string/login"
         style="@style/Button.Flat"/>
 
+    <ProgressBar
+        android:id="@+id/prog_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
 
     <Button
         android:id="@+id/btn_login_signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_login"
+        android:layout_below="@+id/prog_login"
         android:text="@string/sign_in_with_email"
         style="@style/Button.Flat"/>
 

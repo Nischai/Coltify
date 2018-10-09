@@ -25,9 +25,10 @@ import butterknife.OnClick;
 public class LoginActivity extends Activity {
 
     private FirebaseAuth mAuth;
+
     @BindView(R.id.edt_login_email) protected EditText userEmail;
     @BindView(R.id.edt_login_password) protected EditText userPassword;
-    private ProgressDialog progressDialog;
+    @BindView(R.id.prog_login) protected ProgressBar progressBar;
 
     private String email,password;
 
@@ -39,7 +40,7 @@ public class LoginActivity extends Activity {
         ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
-        progressDialog = new ProgressDialog(this);
+
 
     }
 
@@ -68,8 +69,7 @@ public class LoginActivity extends Activity {
 
         if(!validateForm())
             return ;
-        progressDialog.setMessage("Loading");
-        progressDialog.show();
+        progressBar.setVisibility(ProgressBar.VISIBLE);
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -80,10 +80,10 @@ public class LoginActivity extends Activity {
                         } else {
                             makeToast("Login Failed");
                         }
-
+                        progressBar.setVisibility(ProgressBar.INVISIBLE);
                     }
                 });
-        progressDialog.dismiss();
+
     }
 
     private boolean validateForm() {

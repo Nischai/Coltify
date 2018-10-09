@@ -127,7 +127,6 @@ public class AddEventActivity extends AppCompatActivity {
 
     @OnClick(R.id.imb_poster)
     public void onPosterImageClick(){
-
         Intent gallery = new Intent(Intent.ACTION_GET_CONTENT);
         gallery.setType("image/*");
         startActivityForResult(gallery,GALLERY_REQUEST);
@@ -146,7 +145,6 @@ public class AddEventActivity extends AppCompatActivity {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 @SuppressWarnings("VisibleForTests") Uri downloadUri = taskSnapshot.getDownloadUrl();
-
                 newEvent.child("Name").setValue(eventName.getText().toString().trim());
                 newEvent.child("Location").setValue(location.getText().toString().trim());
                 newEvent.child("Date").setValue(date.getText().toString().trim());
@@ -155,7 +153,6 @@ public class AddEventActivity extends AppCompatActivity {
                 newEvent.child("Description").setValue(description.getText().toString().trim());
                 newEvent.child("PosterUri").setValue(downloadUri.toString());
                 newEvent.child("Uid").setValue(user.getUid());
-
                 startActivity(new Intent(AddEventActivity.this,EventListActivity.class));
                 progressDialog.dismiss();
             }
@@ -163,7 +160,6 @@ public class AddEventActivity extends AppCompatActivity {
     }
 
     private void updateView(String s) {
-
         if (s.equals(T)){
             String format = "hh:mm aaa";
             SimpleDateFormat timeFormat = new SimpleDateFormat(format,Locale.US);
